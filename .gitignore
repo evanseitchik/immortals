@@ -1,2 +1,8 @@
 *.pyc
 *.pyo
+libtcod_debug.dylib
+.gitignore
+macsupport.*
+samples_py.py
+cprotos.py
+

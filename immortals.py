@@ -35,7 +35,7 @@ class Object:
         if libtcod.map_is_in_fov(fov_map, self.x, self.y):
             libtcod.console_set_default_foreground(con, self.color)
             libtcod.console_put_char(con, self.x, self.y, self.char, libtcod.BKGND_NONE)
-    
+
     def clear(self):
         libtcod.console_put_char(con, self.x, self.y, ' ', libtcod.BKGND_NONE)
 
@@ -76,7 +76,7 @@ def handle_keys():
     elif libtcod.console_is_key_pressed(libtcod.KEY_RIGHT):
         player.move(1, 0, map)
         return 'recompute fov'
-    
+
 
 #######################################
 # Initialization and main loop
@@ -104,8 +104,8 @@ recompute_fov = True
 
 while not libtcod.console_is_window_closed():
 
-    
-    render_all(objects, map, con, recompute_fov, fov_map, player.x, player.y)   
+
+    render_all(objects, map, con, recompute_fov, fov_map, player.x, player.y)
     recompute_fov = False
 
     libtcod.console_flush()

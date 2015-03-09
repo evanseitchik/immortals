@@ -64,7 +64,7 @@ class Map:
             for y in range(rect.y1 + 1, rect.y2):
                 self.tiles[x][y].blocked = False
                 self.tiles[x][y].block_sight = False
-    
+
     def create_rect_dun(self, room_max_size, room_min_size, max_rooms):
         rooms = []
         num_rooms = 0
